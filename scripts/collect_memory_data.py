@@ -62,56 +62,8 @@ def collect_core_memory_usage():
         print("Collected Core Memory Usage data.")
     except Exception as e:
         print(f"Error collecting Core Memory Usage data: {e}")
-def collect_wmic_memory_data():
-    """
-    Collect memory data from WMIC and save it to a CSV file.
-    """
-    try:
-        # Define the WMIC command to get memory data
-        cmd = ['wmic', 'memorychip', 'get', 'Capacity', '/format:csv']
 
-        # Run the WMIC command and capture the output
-        result = subprocess.run(cmd, capture_output=True, text=True, check=True)
 
-        # Write the captured output to a CSV file
-        with open('data/wmic_memory_data.csv', 'w', encoding='utf-8') as file:
-            file.write(result.stdout)
-
-        print("Collected WMIC Memory Data.")
-    except subprocess.CalledProcessError as e:
-        print(f"Error collecting WMIC Memory Data: {e.stderr}")
-    except Exception as e:
-        print(f"Unexpected error: {e}")
-def collect_memory_stats():
-    """
-    Collect detailed memory statistics.
-    """
-    try:
-        mem_stats = {
-            'Available': psutil.virtual_memory().available,
-            'Total': psutil.virtual_memory().total,
-            'Used': psutil.virtual_memory().used,
-            'Free': psutil.virtual_memory().free,
-            'Active': getattr(psutil.virtual_memory(), 'active', 'N/A'),
-            'Inactive': getattr(psutil.virtual_memory(), 'inactive', 'N/A')
-        }
-        df = pd.DataFrame(list(mem_stats.items()), columns=['Stat', 'Value'])
-        df.to_csv('data/memory_stats.csv', index=False)
-        print("Collected Detailed Memory Statistics data.")
-    except Exception as e:
-        print(f"Error collecting Detailed Memory Statistics data: {e}")
-
-def collect_task_manager_memory_data():
-    """
-    Collect memory data from Task Manager using PowerShell.
-    """
-    try:
-        cmd = 'Get-Process | Select-Object -Property Name, @{Name="Memory Usage (MB)";Expression={[math]::round($_.WS / 1MB, 2)}} | ConvertTo-Csv -NoTypeInformation | Out-File -FilePath data/task_manager_memory_data.csv -Encoding utf8'
-        output = run_powershell_command(cmd)
-        if output is not None:
-            print("Collected Task Manager memory data.")
-    except Exception as e:
-        print(f"Error collecting Task Manager memory data: {e}")
 
 if __name__ == "__main__":
     if not os.path.exists('data'):
@@ -119,6 +71,4 @@ if __name__ == "__main__":
     collect_perfmon_memory_data()
     collect_process_memory_data()
     collect_core_memory_usage()
-    collect_wmic_memory_data()
-    collect_memory_stats()
-    collect_task_manager_memory_data()
+

@@ -1,11 +1,16 @@
-# combined_monitor.py
-
 import threading
 import psutil
 import time
 import subprocess
 import csv
 import os
+
+# Get the number of CPU cores
+num_cores = psutil.cpu_count(logical=True)  # Include logical cores if present
+
+# Generate CSV headers based on the number of cores
+cpu_memory_headers = ["Timestamp"] + [f"Core{i+1}" for i in range(num_cores)] + ["MemoryUsage"]
+system_info_headers = ["Timestamp", "CPUInfo", "MemoryInfo", "BatteryInfo"]
 
 # CSV file paths
 cpu_memory_csv = "cpu_memory_data.csv"
@@ -15,17 +20,18 @@ system_info_csv = "system_info_data.csv"
 if not os.path.exists(cpu_memory_csv):
     with open(cpu_memory_csv, mode='w', newline='') as file:
         writer = csv.writer(file)
-        writer.writerow(["Timestamp", "Core1", "Core2", "Core3", "Core4", "MemoryUsage"])
+        writer.writerow(cpu_memory_headers)
 
 if not os.path.exists(system_info_csv):
     with open(system_info_csv, mode='w', newline='') as file:
         writer = csv.writer(file)
-        writer.writerow(["Timestamp", "CPUInfo", "MemoryInfo", "BatteryInfo"])
+        writer.writerow(system_info_headers)
 
 # Monitor CPU and Memory Usage with psutil and save to CSV
 def monitor_cpu_memory():
-    while True:
-        cpu_percent = psutil.cpu_percent(interval=1, percpu=True)
+    start_time = time.time()
+    while time.time() - start_time <= 45:  # Run for 45 seconds
+        cpu_percent = psutil.cpu_percent(interval=1, percpu=True)  # Get usage for all cores
         memory_info = psutil.virtual_memory()
         
         print("CPU Utilization:")
@@ -53,7 +59,8 @@ def run_powershell_command(command):
 
 # Monitor additional system information using PowerShell and save to CSV
 def monitor_system_info():
-    while True:
+    start_time = time.time()
+    while time.time() - start_time <= 45:  # Run for 45 seconds
         # CPU Information
         cpu_info_command = "Get-WmiObject Win32_Processor | Select-Object Name, NumberOfCores, MaxClockSpeed"
         cpu_info = run_powershell_command(cpu_info_command)
@@ -102,6 +109,11 @@ if __name__ == "__main__":
     for t in threads:
         t.start()
     
-    # Ensure all threads complete
+    # Wait for 45 seconds
+    time.sleep(45)
+    
+    # Stop all threads
     for t in threads:
         t.join()
+
+    print("Data collection stopped. Program terminated.")

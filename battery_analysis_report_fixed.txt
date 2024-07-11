@@ -1,0 +1,7 @@
+Average Discharge Rate: 148.84 mWh/hr
+Correlation between Discharge (mWh) and Battery (%): 0.41
+Daily Efficiency:
+            Discharge (mWh)  Battery (%)
+Day                                     
+2024-07-11     64691.916667    48.212121
+Plots saved as 'battery_discharge_plot_fixed.png', 'battery_percentage_plot_fixed.png', and 'battery_percentage_with_moving_average.png'
