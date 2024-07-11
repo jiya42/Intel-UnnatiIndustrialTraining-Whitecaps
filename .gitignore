@@ -29,6 +29,8 @@ dist/
 *.tmp
 *.bak
 *.swp
+*.pid
+*.seed
 
 # System Files
 .DS_Store
@@ -43,3 +45,18 @@ data/*.csv
 
 # Reports
 reports/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Python test logs
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/

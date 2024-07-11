@@ -1,28 +1,21 @@
 import subprocess
+import os
 
-def optimize_memory():
+def clear_temp_files():
     """
-    Clear the Windows cache to optimize memory.
+    Clear temporary files.
     """
-    print("Starting memory optimization...")
-
-    # Clear temporary files
     try:
-        print("Clearing temporary files...")
-        subprocess.run(['del', '/q', '/f', 'C:\\Windows\\Temp\\*'], shell=True, check=True)
-        print("Temporary files cleared.")
-    except subprocess.CalledProcessError as e:
-        print(f"Failed to clear temporary files: {e}")
-
-    # Flush the pagefile (alternative to `fsutil` cache flush)
-    try:
-        print("Clearing pagefile...")
-        subprocess.run(['defrag', 'C:', '/O', '/H'], shell=True, check=True)  # Optimization command
-        print("Pagefile cleared.")
-    except subprocess.CalledProcessError as e:
-        print(f"Failed to clear pagefile: {e}")
-
-    print("Memory optimization complete.")
+        temp_path = os.environ.get('TEMP', '/tmp')
+        result = subprocess.run(['cmd', '/c', 'del', '/q', '/f', f'{temp_path}\\*'], capture_output=True, text=True)
+        if result.returncode == 0:
+            print("Temporary files cleared.")
+        else:
+            print(f"Error clearing temporary files: {result.stderr}")
+    except Exception as e:
+        print(f"Error: {e}")
 
 if __name__ == "__main__":
-    optimize_memory()
+    print("Starting memory optimization...")
+    clear_temp_files()
+    print("Memory optimization complete.")

@@ -66,9 +66,6 @@ def analyze_process_memory_data():
     except Exception as e:
         print(f"Error analyzing Process Memory data: {e}")
 
-import pandas as pd
-import matplotlib.pyplot as plt
-
 def  analyze_core_memory_usage():
     try:
         df = pd.read_csv('data/core_memory_usage.csv')
