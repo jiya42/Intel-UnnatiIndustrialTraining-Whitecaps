@@ -1,8 +1,13 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
+
+# Define the file paths
+current_dir = os.path.dirname(os.path.abspath(__file__))  # Get the directory of the script
+csv_report_path = os.path.join(current_dir, "battery_report.csv")
 
 # Load the CSV data
-df = pd.read_csv('C:\\Users\\honey\\windows-tdp\\battery\\battery_report.csv')
+df = pd.read_csv(csv_report_path)
 
 # Convert 'Date' column to datetime format
 df['Date'] = pd.to_datetime(df['Date'], errors='coerce')  # Convert to datetime, set errors to NaT
@@ -27,7 +32,7 @@ df['Discharge (mWh)'] = df['Discharge (mWh)'] * df['Time Delta']  # Adjust disch
 df.dropna(subset=['Discharge (mWh)'], inplace=True)
 
 # Save the fixed CSV data
-df.to_csv('C:\\Users\\honey\\windows-tdp\\battery\\battery_report.csv', index=False)
+df.to_csv(csv_report_path, index=False)
 
 # Plot discharge over time
 plt.figure(figsize=(12, 6))
@@ -38,7 +43,7 @@ plt.title('Battery Discharge Over Time')
 plt.grid(True)
 plt.xticks(rotation=45)
 plt.tight_layout()
-plt.savefig('battery_discharge_plot_fixed.png')
+plt.savefig(os.path.join(current_dir, 'battery_discharge_plot_fixed.png'))
 plt.show()
 
 # Plot battery percentage over time
@@ -50,7 +55,7 @@ plt.title('Battery Percentage Over Time')
 plt.grid(True)
 plt.xticks(rotation=45)
 plt.tight_layout()
-plt.savefig('battery_percentage_plot_fixed.png')
+plt.savefig(os.path.join(current_dir, 'battery_percentage_plot_fixed.png'))
 plt.show()
 
 # Plot battery data with a moving average to smooth out the fluctuations
@@ -64,7 +69,7 @@ plt.grid(True)
 plt.xticks(rotation=45)
 plt.tight_layout()
 plt.legend()
-plt.savefig('battery_percentage_with_moving_average.png')
+plt.savefig(os.path.join(current_dir, 'battery_percentage_with_moving_average.png'))
 plt.show()
 
 # Calculate average discharge per hour
@@ -88,7 +93,7 @@ correlation = df['Discharge (mWh)'].corr(df['Battery (%)'])
 print(f"Correlation between Discharge (mWh) and Battery (%): {correlation:.2f}")
 
 # Create a summary report
-with open('battery_analysis_report_fixed.txt', 'w') as file:
+with open(os.path.join(current_dir, 'battery_analysis_report_fixed.txt'), 'w') as file:
     file.write(f"Average Discharge Rate: {average_discharge_rate:.2f} mWh/hr\n")
     file.write(f"Correlation between Discharge (mWh) and Battery (%): {correlation:.2f}\n")
     file.write(f"Daily Efficiency:\n{daily_efficiency}\n")
@@ -104,7 +109,7 @@ plt.ylabel('Frequency')
 plt.title('Histogram of Discharge Rate')
 plt.grid(True)
 plt.tight_layout()
-plt.savefig('discharge_rate_histogram.png')
+plt.savefig(os.path.join(current_dir, 'discharge_rate_histogram.png'))
 plt.show()
 
 # Compare Discharge Across Different Hours
@@ -117,11 +122,11 @@ plt.title('Average Discharge per Hour')
 plt.grid(True)
 plt.xticks(range(24))
 plt.tight_layout()
-plt.savefig('hourly_discharge_plot.png')
+plt.savefig(os.path.join(current_dir, 'hourly_discharge_plot.png'))
 plt.show()
 
 # Save hourly discharge data
-hourly_discharge.to_csv('hourly_discharge_summary.csv')
+hourly_discharge.to_csv(os.path.join(current_dir, 'hourly_discharge_summary.csv'))
 
 # Assess Battery Health Over Time
 df['Battery Degradation (%)'] = df['Battery (%)'].pct_change() * 100  # Percentage change
@@ -133,11 +138,11 @@ plt.title('Battery Degradation Over Time')
 plt.grid(True)
 plt.xticks(rotation=45)
 plt.tight_layout()
-plt.savefig('battery_degradation_plot.png')
+plt.savefig(os.path.join(current_dir, 'battery_degradation_plot.png'))
 plt.show()
 
 # Save battery degradation data
-df[['Date', 'Battery Degradation (%)']].to_csv('battery_degradation_summary.csv', index=False)
+df[['Date', 'Battery Degradation (%)']].to_csv(os.path.join(current_dir, 'battery_degradation_summary.csv'), index=False)
 
 # Calculate Power Consumption
 df['Power Consumption (W)'] = df['Discharge (mWh)'] / df['Time Delta']  # mWh per hour to W
@@ -145,4 +150,4 @@ average_power_consumption = df['Power Consumption (W)'].mean()
 print(f"Average Power Consumption: {average_power_consumption:.2f} W")
 
 # Save power consumption data
-df[['Date', 'Power Consumption (W)']].to_csv('power_consumption_summary.csv', index=False)
+df[['Date', 'Power Consumption (W)']].to_csv(os.path.join(current_dir, 'power_consumption_summary.csv'), index=False)
