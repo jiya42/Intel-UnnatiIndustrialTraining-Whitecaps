@@ -6,3 +6,197 @@ Timestamp,CPUInfo,MemoryInfo,BatteryInfo
               16511608            7915716","EstimatedChargeRemaining BatteryStatus
 ------------------------ -------------
                      100             2"
+2024-07-12 09:36:27,"Name                                           NumberOfCores MaxClockSpeed
+----                                           ------------- -------------
+11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz             2          2995","TotalVisibleMemorySize FreePhysicalMemory
+---------------------- ------------------
+               8117024            1627188","EstimatedChargeRemaining BatteryStatus
+------------------------ -------------
+                      46             2"
+2024-07-12 09:39:40,"Name                                           NumberOfCores MaxClockSpeed
+----                                           ------------- -------------
+11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz             2          2995","TotalVisibleMemorySize FreePhysicalMemory
+---------------------- ------------------
+               8117024            1322476","EstimatedChargeRemaining BatteryStatus
+------------------------ -------------
+                      49             2"
+2024-07-12 09:46:40,"Name                                           NumberOfCores MaxClockSpeed
+----                                           ------------- -------------
+11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz             2          2995","TotalVisibleMemorySize FreePhysicalMemory
+---------------------- ------------------
+               8117024            1344956","EstimatedChargeRemaining BatteryStatus
+------------------------ -------------
+                      55             2"
+2024-07-12 09:46:52,"Name                                           NumberOfCores MaxClockSpeed
+----                                           ------------- -------------
+11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz             2          2995","TotalVisibleMemorySize FreePhysicalMemory
+---------------------- ------------------
+               8117024            1379264","EstimatedChargeRemaining BatteryStatus
+------------------------ -------------
+                      55             2"
+2024-07-12 09:47:04,"Name                                           NumberOfCores MaxClockSpeed
+----                                           ------------- -------------
+11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz             2          2995","TotalVisibleMemorySize FreePhysicalMemory
+---------------------- ------------------
+               8117024            1423568","EstimatedChargeRemaining BatteryStatus
+------------------------ -------------
+                      56             2"
+2024-07-12 09:47:16,"Name                                           NumberOfCores MaxClockSpeed
+----                                           ------------- -------------
+11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz             2          2995","TotalVisibleMemorySize FreePhysicalMemory
+---------------------- ------------------
+               8117024            1433024","EstimatedChargeRemaining BatteryStatus
+------------------------ -------------
+                      56             2"
+2024-07-12 09:47:26,"Name                                           NumberOfCores MaxClockSpeed
+----                                           ------------- -------------
+11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz             2          2995","TotalVisibleMemorySize FreePhysicalMemory
+---------------------- ------------------
+               8117024            1408516","EstimatedChargeRemaining BatteryStatus
+------------------------ -------------
+                      56             2"
+2024-07-12 09:47:38,"Name                                           NumberOfCores MaxClockSpeed
+----                                           ------------- -------------
+11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz             2          2995","TotalVisibleMemorySize FreePhysicalMemory
+---------------------- ------------------
+               8117024            1418944","EstimatedChargeRemaining BatteryStatus
+------------------------ -------------
+                      56             2"
+2024-07-12 09:47:50,"Name                                           NumberOfCores MaxClockSpeed
+----                                           ------------- -------------
+11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz             2          2995","TotalVisibleMemorySize FreePhysicalMemory
+---------------------- ------------------
+               8117024            1422936","EstimatedChargeRemaining BatteryStatus
+------------------------ -------------
+                      56             2"
+2024-07-12 09:48:03,"Name                                           NumberOfCores MaxClockSpeed
+----                                           ------------- -------------
+11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz             2          2995","TotalVisibleMemorySize FreePhysicalMemory
+---------------------- ------------------
+               8117024            1378420","EstimatedChargeRemaining BatteryStatus
+------------------------ -------------
+                      56             2"
+2024-07-12 09:48:53,"Name                                           NumberOfCores MaxClockSpeed
+----                                           ------------- -------------
+11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz             2          2995","TotalVisibleMemorySize FreePhysicalMemory
+---------------------- ------------------
+               8117024            1297576","EstimatedChargeRemaining BatteryStatus
+------------------------ -------------
+                      57             2"
+2024-07-12 10:01:50,"Name                                           NumberOfCores MaxClockSpeed
+----                                           ------------- -------------
+11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz             2          2995","TotalVisibleMemorySize FreePhysicalMemory
+---------------------- ------------------
+               8117024            1029160","EstimatedChargeRemaining BatteryStatus
+------------------------ -------------
+                      68             2"
+2024-07-12 10:02:05,"Name                                           NumberOfCores MaxClockSpeed
+----                                           ------------- -------------
+11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz             2          2995","TotalVisibleMemorySize FreePhysicalMemory
+---------------------- ------------------
+               8117024             911756",N/A
+2024-07-12 10:02:15,,,N/A
+2024-07-12 10:04:03,"Name                                           NumberOfCores MaxClock
+                                                                Speed
+----                                           ------------- --------
+11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz             2     2995","TotalVisibleMemorySize FreePhysicalMemory
+---------------------- ------------------
+               8117024             995484","EstimatedChargeRemaining BatteryStatus
+------------------------ -------------
+                      70             2"
+2024-07-12 10:04:16,"Name                                           NumberOfCores MaxClock
+                                                                Speed
+----                                           ------------- --------
+11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz             2     2995","TotalVisibleMemorySize FreePhysicalMemory
+---------------------- ------------------
+               8117024             968044","EstimatedChargeRemaining BatteryStatus
+------------------------ -------------
+                      70             2"
+2024-07-12 10:04:27,,,N/A
+2024-07-12 10:04:37,,,N/A
+2024-07-12 10:05:09,"Name                                           NumberOfCores MaxClock
+                                                                Speed
+----                                           ------------- --------
+11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz             2     2995","TotalVisibleMemorySize FreePhysicalMemory
+---------------------- ------------------
+               8117024            1161376","EstimatedChargeRemaining BatteryStatus
+------------------------ -------------
+                      71             2"
+2024-07-12 12:57:02,"Name                                           NumberOfCores MaxClock
+                                                                Speed
+----                                           ------------- --------
+11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz             2     2995","TotalVisibleMemorySize FreePhysicalMemory
+---------------------- ------------------
+               8117024            1208652","EstimatedChargeRemaining BatteryStatus
+------------------------ -------------
+                     100             2"
+2024-07-12 13:01:04,"Name                                           NumberOfCores MaxClock
+                                                                Speed
+----                                           ------------- --------
+11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz             2     2995","TotalVisibleMemorySize FreePhysicalMemory
+---------------------- ------------------
+               8117024            1063300","EstimatedChargeRemaining BatteryStatus
+------------------------ -------------
+                     100             2"
+2024-07-12 13:03:11,"Name                                           NumberOfCores MaxClock
+                                                                Speed
+----                                           ------------- --------
+11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz             2     2995","TotalVisibleMemorySize FreePhysicalMemory
+---------------------- ------------------
+               8117024            1024920","EstimatedChargeRemaining BatteryStatus
+------------------------ -------------
+                     100             2"
+2024-07-12 13:08:00,"Name                                           NumberOfCores MaxClock
+                                                                Speed
+----                                           ------------- --------
+11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz             2     2995","TotalVisibleMemorySize FreePhysicalMemory
+---------------------- ------------------
+               8117024             979060","EstimatedChargeRemaining BatteryStatus
+------------------------ -------------
+                     100             2"
+2024-07-12 13:13:51,"Name                                           NumberOfCores MaxClock
+                                                                Speed
+----                                           ------------- --------
+11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz             2     2995","TotalVisibleMemorySize FreePhysicalMemory
+---------------------- ------------------
+               8117024             993136","EstimatedChargeRemaining BatteryStatus
+------------------------ -------------
+                     100             2"
+2024-07-12 13:19:26,"Name                                           NumberOfCores MaxClock
+                                                                Speed
+----                                           ------------- --------
+11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz             2     2995","TotalVisibleMemorySize FreePhysicalMemory
+---------------------- ------------------
+               8117024            1090520","EstimatedChargeRemaining BatteryStatus
+------------------------ -------------
+                     100             2"
+2024-07-12 13:21:04,"Name                                           NumberOfCores MaxClock
+                                                                Speed
+----                                           ------------- --------
+11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz             2     2995","TotalVisibleMemorySize FreePhysicalMemory
+---------------------- ------------------
+               8117024            1047972","EstimatedChargeRemaining BatteryStatus
+------------------------ -------------
+                     100             2"
+2024-07-12 14:32:32,"Name                                           NumberOfCores MaxClockSpeed
+----                                           ------------- -------------
+11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz             2          2995","TotalVisibleMemorySize FreePhysicalMemory
+---------------------- ------------------
+               8117024            1106988","EstimatedChargeRemaining BatteryStatus
+------------------------ -------------
+                      74             1"
+2024-07-12 14:32:48,"Name                                           NumberOfCores MaxClockSpeed
+----                                           ------------- -------------
+11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz             2          2995","TotalVisibleMemorySize FreePhysicalMemory
+---------------------- ------------------
+               8117024            1057440","EstimatedChargeRemaining BatteryStatus
+------------------------ -------------
+                      73             1"
+2024-07-12 19:35:15,"Name                                           NumberOfCores MaxClock
+                                                                Speed
+----                                           ------------- --------
+11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz             2     2995","TotalVisibleMemorySize FreePhysicalMemory
+---------------------- ------------------
+               8117024            1069860","EstimatedChargeRemaining BatteryStatus
+------------------------ -------------
+                      60             2"
