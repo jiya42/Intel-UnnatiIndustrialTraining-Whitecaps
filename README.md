@@ -34,7 +34,8 @@ git clone https://github.com/jiya42/Intel-UnnatiIndustrialTraining-Whitecaps.git
 
 Navigate into the cloned repository
 ```ruby
-cd repository
+cd Intel-UnnatiIndustrialTraining-Whitecaps
+
 ```
 
 Pull the latest changes
