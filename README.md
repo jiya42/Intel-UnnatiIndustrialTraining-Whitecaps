@@ -26,13 +26,14 @@ By combining the power of Python, Docker, and open-source tools, businesses can 
 cd path/to/your/directory
 
 # Clone the repository
-git clone https://github.com/username/repository.git
+git clone https://github.com/jiya42/Intel-UnnatiIndustrialTraining-Whitecaps.git
 
 # Navigate into the cloned repository
 cd repository
 
 # Pull the latest changes
 git pull origin main
+
 # Conclusion
 
 As we navigate the complexities of 5G and edge computing, optimizing power consumption is paramount for businesses seeking to reduce costs and contribute to sustainability goals. By embracing innovative solutions like those highlighted in this project, enterprises can make significant strides towards achieving net-zero power consumption. Let's work together to create a greener and more efficient future powered by technology.
