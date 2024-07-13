@@ -6,7 +6,7 @@ In the fast-paced world of technology, advent of 5G and edge computing has prope
 
 In the era of 5G and edge computing, businesses face the daunting task of managing power consumption effectively. The diverse components of a system, including the CPU, memory, NIC, and TDP, all contribute to power utilization. To navigate this complexity, a comprehensive approach is necessary. The government is encouraging enterprises to shift towards net-zero power consumption, highlighting the urgency of finding sustainable solutions.
 
-# Utilizing Python and Docker for Optimization
+# Utilizing Python for Optimization
 
 To tackle the increased power consumption associated with extensive 5G and edge computing deployments, a project has been initiated to leverage Python and Docker. By utilizing open-source tools like PowerTOP, the project aims to accurately measure power consumption across different system components. Understanding how system parameters such as BIOS settings and OS-level configurations influence power usage is crucial in developing effective strategies for optimizing power consumption.
 
@@ -21,6 +21,18 @@ The project's ultimate goal is to produce a detailed report outlining power cons
 Key Takeaway:
 By combining the power of Python, Docker, and open-source tools, businesses can proactively address power consumption challenges in the era of 5G and edge computing, paving the way for a sustainable future.
 
+# How to Run This 
+# Navigate to the desired directory
+cd path/to/your/directory
+
+# Clone the repository
+git clone https://github.com/username/repository.git
+
+# Navigate into the cloned repository
+cd repository
+
+# Pull the latest changes
+git pull origin main
 # Conclusion
 
 As we navigate the complexities of 5G and edge computing, optimizing power consumption is paramount for businesses seeking to reduce costs and contribute to sustainability goals. By embracing innovative solutions like those highlighted in this project, enterprises can make significant strides towards achieving net-zero power consumption. Let's work together to create a greener and more efficient future powered by technology.
