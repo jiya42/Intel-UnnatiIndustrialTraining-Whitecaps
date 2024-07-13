@@ -1,0 +1,45 @@
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# Distribution / Packaging
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Logs
+*.log
+
+# IDE or Editor Directories
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary Files
+*.tmp
+*.bak
+*.swp
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Performance Monitor data
+data/perfmon_memory_data.csv
+data/perfmon_cpu_data.csv
+
+# Collected data files
+data/*.csv
+
+# Reports
+reports/
