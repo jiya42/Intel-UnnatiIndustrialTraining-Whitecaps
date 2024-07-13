@@ -23,12 +23,12 @@ By combining the power of Python and open-source tools, businesses can proactive
 
 # How to Run This 
 Navigate to the desired directory
-```
+```ruby
 cd path/to/your/directory
 ```
 
 Clone the repository
-```
+```ruby
 git clone https://github.com/jiya42/Intel-UnnatiIndustrialTraining-Whitecaps.git
 ```
 
