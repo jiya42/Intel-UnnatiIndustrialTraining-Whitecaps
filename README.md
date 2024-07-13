@@ -4,38 +4,41 @@ In the fast-paced world of technology, advent of 5G and edge computing has prope
 
 # Addressing the Power Consumption Challenge
 
-In the era of 5G and edge computing, businesses face the daunting task of managing power consumption effectively. The diverse components of a system, including the CPU, memory, NIC, and TDP, all contribute to power utilization. To navigate this complexity, a comprehensive approach is necessary. The government is encouraging enterprises to shift towards net-zero power consumption, highlighting the urgency of finding sustainable solutions.
+In the era of 5G and edge computing, businesses face the daunting task of managing power consumption effectively. The diverse components of a system, including the CPU, memory, NIC, and battery, all contribute to power utilization. To navigate this complexity, a comprehensive approach is necessary. The government is encouraging enterprises to shift towards net-zero power consumption, highlighting the urgency of finding sustainable solutions.
 
 # Utilizing Python for Optimization
 
-To tackle the increased power consumption associated with extensive 5G and edge computing deployments, a project has been initiated to leverage Python and Docker. By utilizing open-source tools like PowerTOP, the project aims to accurately measure power consumption across different system components. Understanding how system parameters such as BIOS settings and OS-level configurations influence power usage is crucial in developing effective strategies for optimizing power consumption.
+To tackle the increased power consumption associated with extensive 5G and edge computing deployments, a project has been initiated to leverage Python. By utilizing open-source tools like PowerTOP, the project aims to accurately measure power consumption across different system components. Understanding how system parameters such as BIOS settings and OS-level configurations influence power usage is crucial in developing effective strategies for optimizing power consumption.
 
 # Measuring Power Consumption in Real-Time
 
-Python scripts play a pivotal role in automating the collection of real-time telemetry data from the CPU, memory, NIC, and TDP. By running containerized workloads with Docker, the project simulates various utilization levels to collect valuable data on power consumption. This data serves as a foundation for measuring power utilization under different loads and identifying areas for optimization.
+Python scripts play a pivotal role in automating the collection of real-time telemetry data from the CPU, memory, NIC, and TDP.The project simulates various utilization levels to collect valuable data on power consumption. This data serves as a foundation for measuring power utilization under different loads and identifying areas for optimization.
 
 # Developing a Software Solution for Dynamic Workload Adjustment
 
-The project's ultimate goal is to produce a detailed report outlining power consumption challenges, methodologies, and findings. By developing a software solution that dynamically adjusts workloads based on input utilization percentages, the project aims to monitor power usage in real-time effectively. This integrated approach seeks to optimize power consumption and align with sustainability goals amidst the rising costs of electricity.
+The project's ultimate goal is to produce a detailed report outlining utilisation challenges, methodologies, and findings. By developing a software solution that dynamically adjusts workloads based on input utilization percentages, the project aims to monitor power usage in real-time effectively. This integrated approach seeks to optimize power consumption and align with sustainability goals amidst the rising costs of electricity.
 
 Key Takeaway:
-By combining the power of Python, Docker, and open-source tools, businesses can proactively address power consumption challenges in the era of 5G and edge computing, paving the way for a sustainable future.
+By combining the power of Python and open-source tools, businesses can proactively address power consumption challenges in the era of 5G and edge computing, paving the way for a sustainable future.
 
 # How to Run This 
-# Navigate to the desired directory
+Navigate to the desired directory
 cd path/to/your/directory
 
-# Clone the repository
+Clone the repository
 git clone https://github.com/jiya42/Intel-UnnatiIndustrialTraining-Whitecaps.git
 
-# Navigate into the cloned repository
+Navigate into the cloned repository
 cd repository
 
-# Pull the latest changes
-git pull origin main
+Pull the latest changes
+git pull origin master
+
+Run this program
+streamlit run app.py
 
 # Conclusion
 
 As we navigate the complexities of 5G and edge computing, optimizing power consumption is paramount for businesses seeking to reduce costs and contribute to sustainability goals. By embracing innovative solutions like those highlighted in this project, enterprises can make significant strides towards achieving net-zero power consumption. Let's work together to create a greener and more efficient future powered by technology.
 
-By implementing the outlined strategies and utilizing the power of Python and Docker, organizations can navigate the power consumption challenges posed by extensive 5G and edge computing deployments effectively. Through a meticulous approach to measurement and optimization, businesses can drive sustainability and cost-efficiency in the digital landscape.
+By implementing the outlined strategies and utilizing the power of Python, organizations can navigate the power consumption challenges posed by extensive 5G and edge computing deployments effectively. Through a meticulous approach to measurement and optimization, businesses can drive sustainability and cost-efficiency in the digital landscape.
