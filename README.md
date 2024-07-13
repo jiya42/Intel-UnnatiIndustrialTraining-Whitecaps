@@ -33,17 +33,17 @@ git clone https://github.com/jiya42/Intel-UnnatiIndustrialTraining-Whitecaps.git
 ```
 
 Navigate into the cloned repository
-```
+```ruby
 cd repository
 ```
 
 Pull the latest changes
-```
+```ruby
 git pull origin master
 ```
 
 Run this program
-```
+```ruby
 streamlit run app.py
 ```
 # Conclusion
