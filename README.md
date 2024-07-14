@@ -48,6 +48,7 @@ Run this program
 streamlit run app.py
 ```
 # Video Demo
+The video showcases the user interface (UI) of the project, providing a comprehensive demo on how to navigate through it. It demonstrates the layout, key features, and functionalities, illustrating the user experience from start to finish. The video guides viewers through various sections, explaining how to interact with different elements and utilize the system effectively.
 ```ruby
 https://youtu.be/seXoOfcIxtU?feature=shared
 ```
