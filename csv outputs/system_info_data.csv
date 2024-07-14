@@ -1,0 +1,29 @@
+Timestamp,CPUInfo,MemoryInfo,BatteryInfo
+2024-07-14 12:20:51,"Name                                           NumberOfCores MaxClockSpeed
+----                                           ------------- -------------
+11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz             4          2803","TotalVisibleMemorySize FreePhysicalMemory
+---------------------- ------------------
+              16511608            7797908","EstimatedChargeRemaining BatteryStatus
+------------------------ -------------
+                      18             1"
+2024-07-14 12:25:25,"Name                                           NumberOfCores MaxClockSpeed
+----                                           ------------- -------------
+11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz             4          2803","TotalVisibleMemorySize FreePhysicalMemory
+---------------------- ------------------
+              16511608            7590964","EstimatedChargeRemaining BatteryStatus
+------------------------ -------------
+                      15             1"
+2024-07-14 12:45:35,"Name                                           NumberOfCores MaxClockSpeed
+----                                           ------------- -------------
+11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz             4          2803","TotalVisibleMemorySize FreePhysicalMemory
+---------------------- ------------------
+              16511608            7298356","EstimatedChargeRemaining BatteryStatus
+------------------------ -------------
+                      24             2"
+2024-07-14 12:47:00,"Name                                           NumberOfCores MaxClockSpeed
+----                                           ------------- -------------
+11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz             4          2803","TotalVisibleMemorySize FreePhysicalMemory
+---------------------- ------------------
+              16511608            7294464","EstimatedChargeRemaining BatteryStatus
+------------------------ -------------
+                      26             2"

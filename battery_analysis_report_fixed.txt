@@ -1,7 +1,0 @@
-Average Discharge Rate: 574.51 mWh/hr
-Correlation between Discharge (mWh) and Battery (%): 0.02
-Daily Efficiency:
-Day           Discharge (mWh)  Battery (%)
-                                     
-2024-07-11     14105.694444    41.166667
-
