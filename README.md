@@ -47,6 +47,10 @@ Run this program
 ```ruby
 streamlit run app.py
 ```
+# Video Demo
+```ruby
+https://youtu.be/seXoOfcIxtU?feature=shared
+```
 # Conclusion
 
 As we navigate the complexities of 5G and edge computing, optimizing power consumption is paramount for businesses seeking to reduce costs and contribute to sustainability goals. By embracing innovative solutions like those highlighted in this project, enterprises can make significant strides towards achieving net-zero power consumption. Let's work together to create a greener and more efficient future powered by technology.
