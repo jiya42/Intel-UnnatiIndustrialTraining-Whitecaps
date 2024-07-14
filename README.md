@@ -19,7 +19,7 @@ Python scripts play a pivotal role in automating the collection of real-time tel
 The project's ultimate goal is to produce a detailed report outlining utilisation challenges, methodologies, and findings. By developing a software solution that dynamically adjusts workloads based on input utilization percentages, the project aims to monitor power usage in real-time effectively. This integrated approach seeks to optimize power consumption and align with sustainability goals amidst the rising costs of electricity.
 
 Key Takeaway:
-By combining the power of Python and open-source tools, businesses can proactively address power consumption challenges in the era of 5G and edge computing, paving the way for a sustainable future.
+By combining the power of Python and open-source tools, businesses can proactively address power consumption challenges in the era of 5G and edge computing, paving the way for a sustainable future.This strategy has only been implemented on our portable workstations and is designed specifically for Windows operating systems and utilizes Windows-specific functionalities, ensuring compatibility and optimized performance within the Windows environment.
 
 # How to Run This 
 Navigate to the desired directory
