@@ -3,6 +3,10 @@ import matplotlib.pyplot as plt
 import os
 
 working_dir = os.getcwd()
+output_dir = os.path.join(working_dir, 'outputs')
+
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
 
 def plot_battery_data():
     file_path = os.path.join(working_dir, 'battery_report.csv')
@@ -37,7 +41,7 @@ def plot_battery_data():
     plt.ylabel('Frequency')
     plt.title('Discharge Rate Histogram')
     plt.grid(True)
-    histogram_path = os.path.join(working_dir, 'discharge_rate_histogram.png')
+    histogram_path = os.path.join(output_dir, 'discharge_rate_histogram.png')
     plt.savefig(histogram_path)
     plt.close()
 
@@ -53,41 +57,53 @@ def plot_battery_data():
     plt.title('Hourly Discharge Rates')
     plt.legend(title='Date', bbox_to_anchor=(1.05, 1), loc='upper left')
     plt.grid(True)
-    hourly_plot_path = os.path.join(working_dir, 'hourly_discharge_plot.png')
+    hourly_plot_path = os.path.join(output_dir, 'hourly_discharge_plot.png')
     plt.savefig(hourly_plot_path)
     plt.close()
 
+    # Create a new column for elapsed time in seconds
+    df['Elapsed Time'] = (df['Date'] - df['Date'].iloc[0]).dt.total_seconds()
+
     # Create figures for Streamlit
     fig1, ax1 = plt.subplots(figsize=(12, 6))
-    ax1.plot(df['Date'], df['Discharge (mWh)'], marker='o', linestyle='-', color='b')
-    ax1.set_xlabel('Date')
+    ax1.plot(df['Elapsed Time'], df['Discharge (mWh)'], marker='o', linestyle='-', color='b')
+    ax1.set_xlabel('Time (hr:min:sec)')
     ax1.set_ylabel('Discharge (mWh)')
     ax1.set_title('Battery Discharge Over Time')
     ax1.grid(True)
-    ax1.xaxis.set_major_formatter(plt.matplotlib.dates.DateFormatter('%Y-%m-%d'))
-    ax1.tick_params(axis='x', rotation=45)
+    ax1.xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: pd.to_datetime(x, unit='s').strftime('%H:%M:%S')))
+    plt.xticks(rotation=45)
     plt.tight_layout()
+    fig1_path = os.path.join(output_dir, 'battery_discharge_over_time.png')
+    fig1.savefig(fig1_path)
+    plt.close(fig1)
 
     fig2, ax2 = plt.subplots(figsize=(12, 6))
-    ax2.plot(df['Date'], df['Battery (%)'], marker='o', linestyle='-', color='r')
-    ax2.set_xlabel('Date')
+    ax2.plot(df['Elapsed Time'], df['Battery (%)'], marker='o', linestyle='-', color='r')
+    ax2.set_xlabel('Time (hr:min:sec)')
     ax2.set_ylabel('Battery (%)')
     ax2.set_title('Battery Percentage Over Time')
     ax2.grid(True)
-    ax2.xaxis.set_major_formatter(plt.matplotlib.dates.DateFormatter('%Y-%m-%d'))
-    ax2.tick_params(axis='x', rotation=45)
+    ax2.xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: pd.to_datetime(x, unit='s').strftime('%H:%M:%S')))
+    plt.xticks(rotation=45)
     plt.tight_layout()
+    fig2_path = os.path.join(output_dir, 'battery_percentage_over_time.png')
+    fig2.savefig(fig2_path)
+    plt.close(fig2)
 
     fig3, ax3 = plt.subplots(figsize=(12, 6))
-    ax3.plot(df['Date'], df['Battery (%)'].rolling(window=5).mean(), color='b', label='5-period Moving Average')
-    ax3.set_xlabel('Date')
+    ax3.plot(df['Elapsed Time'], df['Battery (%)'].rolling(window=5).mean(), color='b', label='5-period Moving Average')
+    ax3.set_xlabel('Time (hr:min:sec)')
     ax3.set_ylabel('Battery (%)')
     ax3.set_title('Battery Percentage Over Time with Moving Average')
     ax3.grid(True)
-    ax3.xaxis.set_major_formatter(plt.matplotlib.dates.DateFormatter('%Y-%m-%d'))
-    ax3.tick_params(axis='x', rotation=45)
+    ax3.xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: pd.to_datetime(x, unit='s').strftime('%H:%M:%S')))
+    plt.xticks(rotation=45)
     plt.tight_layout()
     ax3.legend()
+    fig3_path = os.path.join(output_dir, 'battery_percentage_moving_average.png')
+    fig3.savefig(fig3_path)
+    plt.close(fig3)
 
     fig4, ax4 = plt.subplots(figsize=(12, 6))
     ax4.plot(daily_efficiency['Day'], daily_efficiency['Discharge (mWh)'], marker='o', linestyle='-', color='green')
@@ -98,5 +114,8 @@ def plot_battery_data():
     ax4.xaxis.set_major_formatter(plt.matplotlib.dates.DateFormatter('%Y-%m-%d'))
     ax4.tick_params(axis='x', rotation=45)
     plt.tight_layout()
+    fig4_path = os.path.join(output_dir, 'daily_discharge_over_time.png')
+    fig4.savefig(fig4_path)
+    plt.close(fig4)
 
     return fig1, fig2, fig3, fig4, daily_efficiency, histogram_path, hourly_plot_path, average_discharge_rate, correlation
